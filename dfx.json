@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "truth_dao_backend": {
+      "main": "src/truth_dao_backend/main.mo",
+      "type": "motoko"
+    },
+    "truth_dao_frontend": {
+      "dependencies": [
+        "truth_dao_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/truth_dao_frontend/src/index.html"
+      },
+      "source": [
+        "src/truth_dao_frontend/assets",
+        "dist/truth_dao_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
